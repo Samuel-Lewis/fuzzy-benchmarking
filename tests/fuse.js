@@ -11,9 +11,8 @@ var options = {
   distance: 100,
   maxPatternLength: 32,
   minMatchCharLength: 1
-  // keys: ['title', 'author.firstName']
 };
-var fuseInstance = new Fuse(list, options); // "list" is the item array
+var fuseInstance = new Fuse(list, options);
 
 const suite = new Benchmark.Suite();
 suite
@@ -21,7 +20,7 @@ suite
     fuseInstance.search('Ma');
   })
   .add('Start#NewInstance', () => {
-    var fuse = new Fuse(list, options); // "list" is the item array
+    var fuse = new Fuse(list, options);
     fuse.search('Ma');
   })
   // add listeners
